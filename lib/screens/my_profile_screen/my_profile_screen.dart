@@ -10,7 +10,11 @@ class MyProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child: Text('My Profile')),
+        title: const Text('My Profile', style: TextStyle(
+          fontWeight: FontWeight.bold,
+          color: kTextWhiteColor,
+        ),),
+        centerTitle: true,
         actions: [
           InkWell(
             onTap: () {
@@ -20,7 +24,7 @@ class MyProfileScreen extends StatelessWidget {
               padding: const EdgeInsets.only(right: kDefaultPadding / 2),
               child: Row(
                 children: [
-                  const Icon(Icons.report_gmailerrorred_outlined),
+                  const Icon(Icons.report_gmailerrorred_outlined, color: kTextWhiteColor,),
                   kHalfWidthSizedBox,
                   Text(
                     'Report',
@@ -85,6 +89,7 @@ class MyProfileScreen extends StatelessWidget {
                   title: 'Registration Number',
                   value: '2023-ASDF-2024',
                 ),
+
                 ProfileDetailRow(
                   title: 'Academic Year',
                   value: '2023-2024',
@@ -120,19 +125,19 @@ class MyProfileScreen extends StatelessWidget {
             kSizedBox,
             const ProfileDetailColumn(
               title: 'A Class',
-              value: 'khaled@gmail.com',
+              value: 'khaledmohd202@gmail.com',
             ),
             const ProfileDetailColumn(
               title: 'Father Name',
-              value: 'Mohammad Badawi',
+              value: 'Father Name',
             ),
             const ProfileDetailColumn(
               title: 'Mother Name',
-              value: 'Amina said',
+              value: 'Mother Name',
             ),
             const ProfileDetailColumn(
               title: 'Phone Number',
-              value: '+201152361485',
+              value: '+201060040675',
             ),
           ],
         ),

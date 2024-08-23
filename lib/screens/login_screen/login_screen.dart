@@ -31,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
             //Container
             SizedBox(
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 2.8,
+              height: MediaQuery.of(context).size.height / 2,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -84,10 +84,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       key: _formKey,
                       child: Column(
                         children: [
+                          kSizedBox,
                           buildEmailField(),
                           kSizedBox,
                           buildPasswordField(),
-                          const SizedBox(height: kDefaultPadding * 2.5),
+                          const SizedBox(height: 100),
                           CustomButton(
                             iconData: Icons.arrow_forward_outlined,
                             title: 'LOGIN IN',
@@ -106,7 +107,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               textAlign: TextAlign.end,
                               style: TextStyle(
                                 color: kPrimaryColor,
-                                fontSize: 15.0,
+                                fontSize: 13.0,
                               ),
                             ),
                           ),
@@ -135,6 +136,10 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
       decoration: InputDecoration(
         labelText: 'Password',
+        labelStyle: const TextStyle(
+          fontSize: 20,
+          color: kTextLightColor,
+        ),
         floatingLabelBehavior: FloatingLabelBehavior.always,
         isDense: true,
         suffixIcon: IconButton(
@@ -171,6 +176,10 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
       decoration: const InputDecoration(
         labelText: 'Mobile Number / Email',
+        labelStyle: TextStyle(
+          fontSize: 20,
+          color: kTextLightColor,
+        ),
         floatingLabelBehavior: FloatingLabelBehavior.always,
         isDense: true,
       ),

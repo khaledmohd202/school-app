@@ -13,7 +13,11 @@ class AssignmentScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Padding(
           padding: EdgeInsets.only(left: kDefaultPadding * 4),
-          child: Text('Assignment'),
+          child: Text('Assignment', style: TextStyle(
+            color: Colors.white,
+            fontSize: 25,
+            fontWeight: FontWeight.w600,
+          ),),
         ),
       ),
       body: Column(

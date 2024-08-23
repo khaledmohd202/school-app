@@ -11,10 +11,12 @@ class FeeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: kDefaultPadding * 5.5),
-          child: Text('Fee'),
+        title: const Text('Fee', style: TextStyle(
+          fontWeight: FontWeight.bold,
+          color: kTextWhiteColor,
         ),
+        ),
+        centerTitle: true,
       ),
       body: Column(
         children: [

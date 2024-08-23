@@ -10,10 +10,11 @@ class DateSheetScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(left: kDefaultPadding * 4),
-          child: Text('DateSheet'),
-        ),
+        title: const Text('DateSheet', style: TextStyle(
+          fontWeight: FontWeight.bold,
+          color: kTextWhiteColor,
+        ),),
+        centerTitle: true,
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,
